@@ -131,15 +131,29 @@ The Web UI supports:
 
 ---
 
-## Telegram bot commands (examples)
+## Telegram Commands
 
-- `/status` — system status  
-- `/last` — show latest detected consensus  
-- `/reload` — force immediate re-check  
-- `/add_wallet 0x...` — add wallet  
-- `/remove_wallet 0x...` — remove wallet  
-- `/add_coin BTC` — add trading pair  
-- `/set_consensus 3` — update consensus threshold  
+The bot can be fully operated via Telegram commands.
+
+### Queries
+- `/reload` — Force an immediate on-chain refresh
+- `/last` — Show latest detected consensus signals
+- `/status` — Display current system status
+- `/config` — Show current configuration
+- `/stats` — Show aggregated position statistics
+
+### Configuration
+- `/add_wallet 0x...` — Add a wallet to monitor
+- `/remove_wallet 0x...` — Remove a wallet (full or partial address)
+- `/add_coin BTC` — Add a symbol to monitor
+- `/remove_coin BTC` — Remove a monitored symbol
+- `/set_consensus N` — Set required wallet count for consensus
+- `/set_interval SECONDS` — Update polling interval
+
+### Help
+- `/commands` — Show detailed command examples
+- `/help` — Show command menu
+
 
 All changes are applied **at runtime**, without restarting the service.
 
